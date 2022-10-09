@@ -61,6 +61,7 @@ function BottomTabNavigator() {
       initialRouteName="Home"
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme].tint,
+        tabBarShowLabel: false,                           //Hides labels under tabs
       }}>
       <BottomTab.Screen
         name="Home"
@@ -85,13 +86,29 @@ function BottomTabNavigator() {
         })}
       />
       <BottomTab.Screen
-        name="TabTwo"
+        name="Chat"
         component={TabTwoScreen}
         options={{
-          title: 'Tab Two',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
+          title: 'Chat',
+          tabBarIcon: ({ color }) => <TabBarIcon name="wechat" color={color} />,
+        }}
+        />
+        <BottomTab.Screen
+        name="Groups"
+        component={TabTwoScreen}
+        options={{
+          title: 'Groups',
+          tabBarIcon: ({ color }) => <TabBarIcon name="group" color={color} />,
         }}
       />
+        <BottomTab.Screen
+        name="Tutor"
+        component={TabTwoScreen}
+        options={{
+          title: 'Tutors',
+          tabBarIcon: ({ color }) => <TabBarIcon name="book" color={color} />,
+        }}
+        />
     </BottomTab.Navigator>
   );
 }
