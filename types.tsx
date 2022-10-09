@@ -12,6 +12,7 @@ declare global {
     interface RootParamList extends RootStackParamList {}
   }
 }
+ 
 
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
@@ -25,7 +26,7 @@ export type RootStackScreenProps<Screen extends keyof RootStackParamList> = Nati
 >;
 
 export type RootTabParamList = {
-  TabOne: undefined;
+  Home: undefined;
   TabTwo: undefined;
 };
 
